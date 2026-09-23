@@ -1,0 +1,9 @@
+2026-09-19T20:42:41.610Z [INFO] Shell completions: no supported shell detected, skipping
+2026-09-19T20:42:41.611Z [INFO] Starting CLI in server mode (stdio)
+2026-09-19T20:42:41.657Z [INFO] Starting CLI in stdio mode (Rust JSON-RPC engine)
+2026-09-19T20:42:41.671Z [INFO] CLI server ready (stdio mode, Rust JSON-RPC engine)
+2026-09-19T20:42:41.671Z [INFO] Server started, waiting for requests
+2026-09-19T22:03:01.338Z [INFO] Preparing runtime for graceful shutdown
+2026-09-19T22:03:01.349Z [INFO] Starting graceful shutdown of CLI server
+2026-09-19T22:03:01.351Z [INFO] Destroying 0 active sessions
+2026-09-19T22:03:01.392Z [INFO] CLI server prepared for shutdown; transport remains open for RPC response
