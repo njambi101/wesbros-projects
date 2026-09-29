@@ -154,3 +154,10 @@ const fruits = ["Banana", "Orange", "Apple", "Mango"]
  fruits.splice(2, 1, "lemon", "kiwi");
 console.log(fruits);
 console.log(fruits.splice(0, 2));
+
+console.log("start")
+setTimeout(function (){
+    console.log("This is setTimeout");
+} , 2000);
+
+console.log("end")
