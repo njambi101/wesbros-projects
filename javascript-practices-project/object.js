@@ -58,11 +58,24 @@ const myShoppingList = (shoppingList) => {
 }
 console.log(myShoppingList(shoppingList))*/ 
 
-let lunches = [];
+/*let lunches = [];
 const addLunchToEnd = (strin) => {
     lunches.push(strin)
     console.log(`${strin} added to the end of the lunch menu.`)
     return lunches
 
 }
-console.log(addLunchToEnd("boba"))
+console.log(addLunchToEnd("boba"))*/ 
+let days = [ "sunday","monday", "tuesday", "wednesday", "thursday"]
+let toDoList = {
+    "monday" : "wash hair",
+    "tuesday" : "piano practice",
+    "wednesday" : "sowing garments",
+    "thursday" : "farming",
+    "friday" : "weeding"
+}
+days.unshift
+let today = days[new Date().getDay()];
+//console.log(today)
+console.log(toDoList[today])
+console.log(toDoList.monday)
