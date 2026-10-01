@@ -66,7 +66,7 @@ const addLunchToEnd = (strin) => {
 
 }
 console.log(addLunchToEnd("boba"))*/ 
-let days = [ "sunday","monday", "tuesday", "wednesday", "thursday"]
+/*let days = [ "sunday","monday", "tuesday", "wednesday", "thursday"]
 let toDoList = {
     "monday" : "wash hair",
     "tuesday" : "piano practice",
@@ -79,3 +79,95 @@ let today = days[new Date().getDay()];
 //console.log(today)
 console.log(toDoList[today])
 console.log(toDoList.monday)
+*/ 
+let animals = ["cow", "dog", "goat", "chicken"];
+//console.log(animals.length)
+function removeLastLunch(animals) {
+    if(animals.length > 0) {
+        const remove = animals.shift();
+        console.log(`${remove} removed from the start of the lunch menu.`)
+    } else {
+        console.log("no lunches to remove. ")
+    }
+    return animals
+}
+console.log(removeLastLunch(animals))
+
+
+/*function removeLastLunch(animals){
+    for(let i = 0 ; i > animals.length; i++){
+        if (i >= 0){
+            console.log(animals.shift()+ "removed from the end of the lunch menu.")
+        }else{
+            console.log("No lunches to remove.")
+        }
+    }
+    return animals;
+}
+console.log(removeLastLunch())*/ 
+let arr = [1, 2, 3, 4, 5, 6, 7, 8,10];
+let map1 = arr.map((num) => num * num);
+
+
+function fun (){
+    console.log("how are you doing today")
+}
+function funner (fun){
+    fun ()
+}
+funner(fun)
+
+
+/*function getRandomLunch(arr) {
+    if (arr.length > 0) {
+        const randomIndex = Math.floor(Math.random() * arr.length);
+        console.log(`Randomly selected lunch: ${arr[randomIndex]}`);
+    } else {
+        console.log("No lunches available.");
+    }
+}
+getRandomLunch(arr)
+
+let prizes = ["cows", "pigs", "gold", "silver", "iron", "perfume"]
+
+function showLunchMenu(arr) {
+    if (prizes.length > 0) {
+        console.log(`Menu items: ${prizes.join("/ ")}`);
+    } else {
+        console.log("The menu is empty.");
+    }
+}
+showLunchMenu()*/ 
+/*function getRandomItem (prizes) {
+    if (prizes.length > 0) {
+        let random = Math.floor(Math.random() * prizes.length)
+        console.log(prizes[random])
+    } else {
+        console.log("this array is empty.")
+    }
+}
+getRandomItem(prizes)*/ 
+/*function rmvItem (arr){
+    if(rmvItem.length > 0){
+        let len = arr.pop()
+        console.log(`${len} is the only iten that has been removed.`)
+    }else {
+        console.log("can not remove an item.")
+    }
+    return arr
+}
+console.log(rmvItem(arr))*/ 
+/*const anim = (animals) => {
+    //let blue = animals.shift();
+    if(animals.length >=0){
+        console.log(animals.shift() + "removed from the end of the lunch menu.")
+    }else{
+        console.log("No lunches to remove.")
+    }
+    return animals
+}
+
+console.log(anim())
+//animals.shift()
+//console.log(animals)
+*/ 
