@@ -107,16 +107,21 @@ console.log(removeLastLunch(animals))
 console.log(removeLastLunch())*/ 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8,10];
 let map1 = arr.map((num) => num * num);
+let even = arr.filter((num) => num > 5);
+let reduced = arr.reduce((a,b) => a + b, 0)
+let funct = arr.forEach((num) => num * 2);
 
+console.log(funct)
+console.log(reduced)
 
-function fun (){
+/*function fun (){
     console.log("how are you doing today")
 }
 function funner (fun){
     fun ()
 }
 funner(fun)
-
+*/
 
 /*function getRandomLunch(arr) {
     if (arr.length > 0) {
