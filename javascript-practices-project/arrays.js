@@ -90,14 +90,14 @@ console.log(b)*/
         break;
     }
 }*/ 
-const n = new Array(1,2,3,4,5,6,8)
+/*const n = new Array(1,2,3,4,5,6,8)
 for (let i = 0; i < n.length; i++){
     if (n[i] === 5){
-        console.log("fount:", n[i])
+        console.log("found:", n[i])
         break;
     }
 }
-
+*/
 
 //console.log(anime.length = 2)
 //anime.push ( "sheildhero")
@@ -150,7 +150,7 @@ let rename = temp.map(u => `okay , ${temp}` )
 console.log(rename)*/ 
 //The flatMap() method first maps all elements of an array and then creates a new array by flattening the array.
 //const newArr = temp.flatMap(x => [x, x * 10])
-const fruits = ["Banana", "Orange", "Apple", "Mango"]
+/*const fruits = ["Banana", "Orange", "Apple", "Mango"]
  fruits.splice(2, 1, "lemon", "kiwi");
 console.log(fruits);
 console.log(fruits.splice(0, 2));
@@ -160,4 +160,59 @@ setTimeout(function (){
     console.log("This is setTimeout");
 } , 2000);
 
-console.log("end")
+console.log("end")*/ 
+const students = [
+  { name: "Liam Smith", birthYear: 2008, gender: "Male" },
+  { name: "Olivia Johnson", birthYear: 2009, gender: "Female" },
+  { name: "Noah Williams", birthYear: 2007, gender: "Male" },
+  { name: "Emma Brown", birthYear: 2008, gender: "Female" },
+  { name: "Oliver Jones", birthYear: 2009, gender: "Male" },
+  { name: "Ava Garcia", birthYear: 2007, gender: "Female" },
+  { name: "Elijah Miller", birthYear: 2008, gender: "Male" },
+  { name: "Charlotte Davis", birthYear: 2009, gender: "Female" },
+  { name: "William Rodriguez", birthYear: 2007, gender: "Male" },
+  { name: "Sophia Martinez", birthYear: 2008, gender: "Female" },
+  { name: "James Hernandez", birthYear: 2009, gender: "Male" },
+  { name: "Amelia Lopez", birthYear: 2007, gender: "Female" },
+  { name: "Benjamin Gonzalez", birthYear: 2008, gender: "Male" },
+  { name: "Isabella Wilson", birthYear: 2009, gender: "Female" },
+  { name: "Lucas Anderson", birthYear: 2007, gender: "Male" },
+  { name: "Mia Thomas", birthYear: 2008, gender: "Female" },
+  { name: "Henry Taylor", birthYear: 2009, gender: "Male" },
+  { name: "Evelyn Moore", birthYear: 2007, gender: "Female" },
+  { name: "Alexander Jackson", birthYear: 2008, gender: "Male" },
+  { name: "Harper Martin", birthYear: 2009, gender: "Female" }
+];
+let names = {
+    name : "grace mjambi",
+    birthYear : 2002,
+    gender : "female"
+}
+//students.unshift(name)
+students.splice(4, 0, names)
+//let named = students.find(student => student.name === "grace mjambi")
+//let y = students.find(year => year.birthYear === 2009 && year.name === "grace mjambi")
+//let y = students.filter(car => car.birthYear === 2008) 
+//let a = students.filter(d => d.gender === "Female")
+//let s = students.map(i => 2026 - i.birthYear )
+/*let age = students.map ( u => {
+    if (u.birthYear === 2007){
+        return "welcome 2007 first years."
+    }else if (u.birthYear === 2008){
+        return "welcome 2008 second years"
+    }else if (u.birthYear === 2009){
+        return "welcome 2009 third year"
+    }
+})*/ 
+/*let d = students.map(r => {
+    let prop = {
+        "name" : students.name,
+        "size" : "large"
+    }
+    return prop
+});
+console.log(d)*/ 
+
+
+
+
