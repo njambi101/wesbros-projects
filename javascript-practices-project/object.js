@@ -1,3 +1,30 @@
+const names = {
+     fName: "Benjamin ", 
+     lName : "Gonzales",
+     birthYear: 2008, 
+     gender: "Male" ,
+     at : function() {
+         return this.fName + " " + this.lName
+     }
+}
+console.log( names.hasOwnProperty("gender"));
+console.log(names)
+names.fName = "grace";
+const newname = (l, t) => {
+    l.namez = t;
+    return l;
+}
+console.log(newname(names, "tommy"))
+//names.newname = "sandra",
+console.log(names)
+//console.log(names.at())
+
+
+
+
+
+
+
 /*const student = {
     firstName : "grace",
     lastName : "njambi",
@@ -80,7 +107,7 @@ let today = days[new Date().getDay()];
 console.log(toDoList[today])
 console.log(toDoList.monday)
 */ 
-let animals = ["cow", "dog", "goat", "chicken"];
+/*let animals = ["cow", "dog", "goat", "chicken"];
 //console.log(animals.length)
 function removeLastLunch(animals) {
     if(animals.length > 0) {
@@ -92,7 +119,7 @@ function removeLastLunch(animals) {
     return animals
 }
 console.log(removeLastLunch(animals))
-
+*/
 
 /*function removeLastLunch(animals){
     for(let i = 0 ; i > animals.length; i++){
@@ -105,7 +132,7 @@ console.log(removeLastLunch(animals))
     return animals;
 }
 console.log(removeLastLunch())*/ 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8,10];
+/*let arr = [1, 2, 3, 4, 5, 6, 7, 8,10];
 let map1 = arr.map((num) => num * num);
 let even = arr.filter((num) => num > 5);
 let reduced = arr.reduce((a,b) => a + b, 0)
@@ -113,7 +140,7 @@ let funct = arr.forEach((num) => num * 2);
 
 console.log(funct)
 console.log(reduced)
-
+*/
 /*function fun (){
     console.log("how are you doing today")
 }

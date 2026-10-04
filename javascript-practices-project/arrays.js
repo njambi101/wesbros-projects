@@ -1,3 +1,64 @@
+/*const golfScore = (par, strokes) => {
+    if (strokes === 1) {
+        return "Hole-in-one!"
+    } else if (par - 2 >= strokes) {
+        return "Eagle"
+    } else if (par - 1 === strokes) {
+        return "Birdie"
+    } else if (strokes === par) {
+        return "par"
+    } else if (par + 1 === strokes) {
+        return "Bogey"
+    } else if (par + 2 === strokes) {
+        return "Double Bogey"
+    } else if (par + 3 <= strokes) {
+        return "Go Home!"
+    }
+}
+console.log(golfScore(3, 3))
+*/ 
+const animals = {
+    name : "lions",
+    age : 90,
+    color : "red"
+}
+
+const newage = (b, c) => {
+    b.color = c;
+    
+    return b
+}
+
+const fun = (a, b) => {
+    a.news = b;
+    return a;
+}
+console.log(fun(animals, "good news"))
+
+const remo = ( k) => {
+    delete k.news;
+    return k;
+} 
+console.log(remo(animals))
+//animals.age = 50;
+//animals.boo = "pow";
+console.log(newage(animals, 
+    'purple'
+))
+
+console.log(animals.hasOwnProperty("world"))
+ /*function named (a) {
+    return a.name;
+ }
+console.log(named(animals))*/ 
+/*const addpower = (pet, power) => {
+    pet.good = power ;
+    return pet;
+}
+console.log(addpower(animals, "run"))*/ 
+
+
+
 /*const cars = [];
 cars[0]= "saab";
 cars[1]= "Volvo";
@@ -80,7 +141,7 @@ const users = ["gojo", "emilia", "subaru", "rimiru"];
 const greetings = users.map(name => `Hello ,${users}`)
 console.log(greetings.toString())
 */
-const number =["jjk", "attackontitans", "demonslayer", "re:zero"];
+//const number =["jjk", "attackontitans", "demonslayer", "re:zero"];
 /*const b = number.map(y => `te number is , ${number}`)
 console.log(b)*/
 
@@ -114,7 +175,7 @@ for (let i = 0; i < n.length; i++){
 //anime.unshift("kekai sensen")
 //anime[anime.legth] = "kiwi";
 //anime.isArray(anime)
-const anime =["jjk", "attackontitans", "demonslayer", "re:zero"];
+//const anime =["jjk", "attackontitans", "demonslayer", "re:zero"];
 /*/const manga =["Devilman Crybaby", "Dragon Ball", "Dragon Ball Z"];
 const myanime = manga.concat(anime, "jokings")
 */ 
@@ -136,7 +197,7 @@ function myFunction(value, index, array) {
     return value > 18;
 }
 console.log(first)*/ 
-const temp = [27, 28, 30, 43, 40, 42, 35, 30]
+//const temp = [27, 28, 30, 43, 40, 42, 35, 30]
 /*let high = temp.findLast(x => x > 40);
 console.log(high)
 
@@ -161,7 +222,7 @@ setTimeout(function (){
 } , 2000);
 
 console.log("end")*/ 
-const students = [
+/*const students = [
   { name: "Liam Smith", birthYear: 2008, gender: "Male" },
   { name: "Olivia Johnson", birthYear: 2009, gender: "Female" },
   { name: "Noah Williams", birthYear: 2007, gender: "Male" },
@@ -187,9 +248,9 @@ let names = {
     name : "grace mjambi",
     birthYear : 2002,
     gender : "female"
-}
+}*/
 //students.unshift(name)
-students.splice(4, 0, names)
+//students.splice(4, 0, names)
 //let named = students.find(student => student.name === "grace mjambi")
 //let y = students.find(year => year.birthYear === 2009 && year.name === "grace mjambi")
 //let y = students.filter(car => car.birthYear === 2008) 
