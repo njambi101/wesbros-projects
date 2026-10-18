@@ -2,7 +2,7 @@ import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
 import inquirer from "inquirer";
 import { createSpinner } from "nanospinner";
-console.log(chalk.bgBlue('your mama a hoe!'))
+
 let playerName ;
 
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms))
@@ -32,31 +32,13 @@ const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms))
     })
     playerName = answers.player_name
     
-    
-
-    //console.log( playerName)
  }
 
 await askName()
 
-/*function question_1 () {
-    const answers = inquirer.prompt({
-        name: 'question_1',
-        title : 'list',
-        message : 'Javascript was created in 10 days then released on\n',
-        choices : [
-            'May 23rd, 1995',
-            'Nov 24th, 1995',
-            'Dec 4th, 1995',
-            'Dec 17, 1996',
-        ],
-        
-    });
-    return handleAnswer(answers.question_1 == 'Dec 4th, 1995');
- }
-*/ 
+
 async function question_1 () {
-    // 2. Added 'await' before inquirer, and changed 'title' to 'type'
+    
     const answers = await inquirer.prompt({
         name: 'question_1',
         type : 'select', 
@@ -69,7 +51,7 @@ async function question_1 () {
         ],
     });
     
-    // 3. Added 'await' before handleAnswer
+    
     return await handleAnswer(answers.question_1 === 'Dec 4th, 1995');
 }
  async function handleAnswer (isCorrect){
@@ -89,15 +71,15 @@ async function question_1 () {
     const answers = await inquirer.prompt({
         name : "question_2",
         type : "select",
-        message : "what is the best anime of all timesn/",
+        message : "What is the largest country in the world by land area?n/",
         choices : [
-            'jujutsu kaisen',
-            'hell`s paradise',
-            'demon slayers',
-            'tokyo ghoul'
+            ' Canada',
+            ' China',
+            ' Russia',
+            ' United States'
         ]
     })
-    return handleAnswer2(answers.question_2 == "hell`s paradise")
+    return handleAnswer2(answers.question_2 == "Russia")
  }
 
  async function handleAnswer2(correct){
@@ -112,4 +94,31 @@ async function question_1 () {
  }
 
  await question_2();
+
+ async function question_3 () {
+    const answers = await inquirer.prompt({
+        name : "question_3",
+        type : "select",
+        message : "Which US state has the most National Parks?n/",
+        choices : [
+            ' Colorado',
+           ' California',
+           'Alaska',
+           'Florida'
+        ]
+    })
+    return handleAnswer3(answers.question_3 == "California")
+ }
  
+  async function handleAnswer3(correct){
+    const spinner = createSpinner('Waiting for the answersa......').start();
+   await sleep()
+   if(correct){
+    spinner.success({text:`congratuletions your are not a larper......`})
+   } else {
+    spinner.error({text:`sorry but i have to dicleare you a larper `})
+    process.exit(1)
+   }
+ }
+
+ await question_3();
