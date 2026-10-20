@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Server</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: inline-block;
+            width: 80px;
+        }
+
+        input {
+            padding: 4px;
+            width: 200px;
+        }
+
+        button {
+            margin: 10px 5px 20px 0;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 6px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Add New User (POST)</h2>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Leanne Graham">
+    </div>
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Bret">
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Sincere@april.biz">
+    </div>
+
+    <button onclick="makePost()">Submit Post Request</button>
+    <button onclick="makeGet()">Fetch All Users (GET)</button>
+
+    <h2>User List</h2>
+    <table id="table1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        // GET Request Function
+        function makeGet() {
+            fetch('https://jsonplaceholder.typicode.com/users')
+                .then((res) => res.json())
+                .then(json => {
+                    let rows = '';
+                    json.forEach(user => {
+                        rows += `<tr>
+                        <td>${user.name}</td>
+                        <td>${user.username}</td>
+                        <td>${user.email}</td>
+                    </tr>`;
+                    });
+                    document.querySelector('#table1 tbody').innerHTML = rows;
+                })
+        }
+
+        // New POST Request Function
+        function makePost() {
+            // 1. Gather input values from the DOM
+            const nameInput = document.getElementById('name').value;
+            const usernameInput = document.getElementById('username').value;
+            const emailInput = document.getElementById('email').value;
+
+            // Simple validation to ensure fields aren't empty
+            if (!nameInput || !usernameInput || !emailInput) {
+                alert('Please fill out all fields before submitting.');
+                return;
+            }
+
+            // 2. Format the data object to send
+            const data = {
+                name: nameInput,
+                username: usernameInput,
+                email: emailInput
+            };
+
+            // 3. Perform the POST fetch request
+            fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+                body: JSON.stringify(data)
+            })
+                .then((res) => res.json())
+                .then((json) => {
+                    console.log('Success response from API:', json);
+                    alert(`Success! User added with Mock ID: ${json.id}`);
+
+                    // 4. Optinal: Dynamically append the newly created user directly to the table view
+                    let newRow = `<tr>
+                    <td><b>${json.name} (New)</b></td>
+                    <td>${json.username}</td>
+                    <td>${json.email}</td>
+                </tr>`;
+                    document.querySelector('#table1 tbody').innerHTML += newRow;
+
+                    // Clear input fields after success
+                    document.getElementById('name').value = '';
+                    document.getElementById('username').value = '';
+                    document.getElementById('email').value = '';
+                })
+                .catch((err) => {
+                    console.error('Error sending data:', err);
+                });
+        }
+    </script>
+</body>
+
+</html>
